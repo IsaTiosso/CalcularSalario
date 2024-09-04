@@ -79,7 +79,7 @@ while (true) //forçar interrupção - enquanto verdadeiro
     }
     Console.WriteLine("Pressione qualquer tecla para continuar");
     Console.ReadKey();
-}// Essa chave fecha o else if do F3 
+ } // Essa chave fecha o else if do F3 
 else if(tecla.Key == ConsoleKey.Delete)
 {
     //sair do programa
