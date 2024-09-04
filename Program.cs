@@ -61,5 +61,36 @@ while (true) //forçar interrupção - enquanto verdadeiro
         Console.WriteLine($"o 13° salário proporcional é: R$ {decimoTerceiro:F2}");
         Console.ReadKey();
     }// Essa chave fecha o else if do F2 
-
+  else if (tecla.Key == ConsoleKey.F3)
+  {
+    //Exibir o coneúdo do vetor na tela 
+    Console.Clear();
+    Console.WriteLine("Histórico de cálculos realizados");
+    if(indiceHistorico == 0)
+    {
+        Console.WriteLine("Nenhum cálculo realizado até o momento");
+    }
+    else
+    {
+        for (int i = 0; i < indiceHistorico; i++) //laço de repetição (incrementa, testa e executa) fica nessa até for igual a zero
+        {
+            Console.WriteLine(i + 1 + "º Histórico:" + historico[i]);   
+        }
+    }
+    Console.WriteLine("Pressione qualquer tecla para continuar");
+    Console.ReadKey();
+}// Essa chave fecha o else if do F3 
+else if(tecla.Key == ConsoleKey.Delete)
+{
+    //sair do programa
+    Console.WriteLine("Saindo...");
+    break; // força saída 
+}
+else // se clicou em outra tecla
+{
+    Console.Clear();
+    Console.WriteLine("Opção inválida! Tente novamente!");
+    Console.WriteLine("Pressione qualquer tecla para continuar");
+    Console.ReadKey();  
+}
 }
